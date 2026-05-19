@@ -1,53 +1,35 @@
 <html>
 <head>
     <title>PC Parts</title>
-    <style>
-        body {
-            background: url('bg.jpg') no-repeat center center fixed;
-            background-size: cover;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        .header {
-            background-color: #902200; /* slightly corrected hex */
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .header img {
-            width: 40px;
-        }
-        .marquee-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        marquee img {
-            margin: 0 10px;
-        }
-        .marquee-text {
-            color: white;
-            font-size: 24px;
-            margin-top: 10px;
-            display: block;
-        }
-    </style>
 </head>
-<body>
-    <div class="header">
-        <img src="logo.jpg" alt="Logo">
-        <div style="color:white; font-size:20px;">Tech Parts</div>
-    </div>
+<body background="bg.jpg">
+    <center>
+        <table border="0" cellpadding="0" cellspacing="0" width="95%">
+            <tbody>
+                <!-- Header row -->
+                <tr bgcolor="#902200" height="60" valign="middle">
+                    <td>
+                        <img src="logo.jpg" width="40" align="left" hspace="10">
+                        <font color="white" size="3" face="Arial">
+                            <b>Tech Parts</b>
+                        </font>
+                    </td>
+                </tr>
 
-    <div class="marquee-container">
-        <marquee scrollamount="6">
-            <img src="1.jpg" width="300" height="200">
-            <img src="2.jpg" width="300" height="200">
-            <img src="3.jpg" width="300" height="200">
-            <img src="4.jpg" width="300" height="200">
-        </marquee>
-        <span class="marquee-text"><i>The Best PC Parts</i></span>
-    </div>
+                <!-- Marquee row -->
+                <tr>
+                    <td align="center">
+                        <marquee scrollamount="6">
+                            <img src="1.jpg" width="300" height="200" hspace="20">
+                            <img src="2.jpg" width="300" height="200" hspace="20">
+                            <img src="3.jpg" width="300" height="200" hspace="20">
+                            <img src="4.jpg" width="300" height="200" hspace="20">
+                        </marquee><br>
+                        <font size="5" color="white"><i>The Best PC Parts</i></font>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
 </body>
 </html>
