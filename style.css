@@ -1,0 +1,374 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url('bg.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;        /* vertical alignment */
+    justify-content: center;    /* text center */
+    position: relative;         /* logo position control */
+    background-color: #222;
+    color: rgb(250, 160, 4);
+    padding: 20px 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Logo left side */
+.header img {
+    position: absolute;
+    left: 20px;               /* screen left margin */
+    width: 50px;
+}
+
+/* Text centered automatically */
+.header span {
+    text-align: center;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+}
+
+.menu a {
+    flex: 1;
+    text-align: center;
+    padding: 15px 0;
+    text-decoration: none;
+    color: rgb(0, 205, 250);
+}
+
+.menu a:hover {
+    background-color: rgb(52, 200, 216);
+    color: black;
+}
+
+.menu a.active{
+    background-color: rgb(52, 200, 216);
+    color: black;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+    color: white;
+}
+
+.gallery img {
+    width: 200px;
+    margin: 10px;
+    border: 2px solid white;
+}
+
+.marquee-container {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0,0,0,0.3); /* optional background */
+}
+
+.marquee-container img {
+    width: 200px;     /* image size */
+    height: auto;
+    margin: 0 15px;   /* image spacing */
+    border: 2px solid white; /* optional border */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('bg.jpg'); /* path adjust කරන්න */
+    background-size: cover;        /* full page cover */
+    background-position: center;   /* center the image */
+    background-repeat: no-repeat;
+}
+
+.para {
+    color: white;
+    text-align: center;
+    justify-content: right;
+}
+
+.tab {
+    width: 80%;                /* table container width */
+    margin: 50px auto;         /* center horizontally with margin top/bottom */
+    text-align: center;        /* caption and table content center */
+}
+
+.tab table {
+    width: 100%;
+    border-collapse: collapse; /* remove double borders */
+    background-color: rgba(0,0,0,0.5); /* optional background */
+    color: white;              /* text color */
+    font-family: Arial, sans-serif;
+}
+
+.tab caption {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+    color: rgba(127, 129, 255, 0.878);
+}
+
+.tab td {
+    border: 1px solid white;   /* table cell border */
+    padding: 10px;
+    font-size: 18px;
+}
+
+.tab tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.1); /* alternate row color */
+}
+
+/* Last row special background for Sunday (Closed) */
+.tab tr:last-child {
+    background-color: rgba(255, 0, 0, 0.213);
+    color: white;  /* text color for visibility */
+}
+
+.branch{
+    text-align: center;
+    color: white;
+}
+
+.branch ul{
+    display: inline-block;
+    text-align: left;
+    list-style-type: circle;
+    padding-left: 20px;
+}
+
+.tab2 table{
+    margin: auto;
+    border-spacing: 20px;
+}
+
+.tab2 img{
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.tab2 td{
+    text-align: center;
+}
+
+.tab2 table img{
+    width: 150px;
+}
+
+.tab2 caption{
+    text-align: center;
+    font-size: 21px;
+    font-weight: bold;
+    color: dodgerblue;
+    padding-bottom: 20px;
+    background-color: #1c1b1b30;
+}
+
+.texa{
+    position:static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    font-weight: bold;
+    position:fixed;
+}
+
+/* Form Container */
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* හරස් අතට මැදට ගැනීමට (Horizontal Center) */
+    justify-content: center; /* දික් අතට මැදට ගැනීමට (Vertical Center) */
+    padding: 40px 20px;
+    min-height: calc(100vh - 150px); /* Form එක Screen එකේ ලස්සනට මැදට තබා ගැනීමට */
+}
+
+.form-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+    color: #ffffff; /* මාතෘකාව සුදු පාට කලා */
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* කළු shadow එකක් දුන්නා කැපිලා පේන්න */
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* Form එක හරියටම මැදට ගැනීමට */
+}
+
+.form-group {
+    display: flex;
+    align-items: center; /* ලේබල් සහ බොක්ස් එකම මට්ටමට ගැනීමට */
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    width: 150px;
+    font-size: 16px;
+    color: #ffffff; /* Name, Phone, Email ලේබල් ඔක්කොම සුදු පාට කලා */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* Input Boxes (ලියන කොටු) */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #555;
+    border-radius: 4px; /* කොටු වල කොන් තරමක් වටකුරු කලා ලස්සන වෙන්න */
+    outline: none;
+    background-color: #ffffff; /* කොටුව ඇතුළ සුදු පාට කලා */
+    color: #000000; /* කොටුව ඇතුළේ ලියන අකුරු කළු පාට කලා (එතකොටයි කියවන්න පුළුවන්) */
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 70px;
+}
+
+/* Buttons (බොත්තම්) */
+.btn-group {
+    margin-left: 150px; /* ලේබල් වල ඉඩ හැර බොත්තම් පටන් ගැනීමට */
+    display: flex;
+    gap: 12px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #777;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02); /* මවුස් එක උඩට යද්දී ලස්සනට පොඩ්ඩක් ලොකු වෙන්න */
+}
+
+.back-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 6px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border: 1px solid #777;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Footer */
+footer {
+    background-color: #111111; /* Footer එක කළු පාට කලා (ඔයාගේ කලින් code එකේ white තිබුණේ) */
+    color: #aaaaaa; /* Footer අකුරු ලා අළු පාට */
+    text-align: right;
+    padding: 15px 40px;
+    font-size: 13px;
+    border-top: 1px solid #222;
+}
+
+/* ප්‍රධාන Container එක */
+        .gallery-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* පේළි අතර පරතරය */
+        }
+
+        /* සෑම පේළියක්ම සකසන ආකාරය */
+        .marquee-row {
+            width: 100%;
+            overflow: hidden;
+            background-color: #1a1a1a00; /* පේළියේ පසුබිම් පාට */
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+        }
+
+        /* පින්තූර 4 අඩංගු පෙට්ටිය */
+        .marquee-track {
+            display: flex;
+            gap: 15px; /* පින්තූර අතර පරතරය */
+            width: max-content;
+        }
+
+        /* පින්තූර වල සයිස් එක */
+        .marquee-track img {
+            width: 250px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 2px solid #333;
+        }
+
+        /* ⬅️ වමට යන Animation එක (Left Marquee) */
+        .move-left {
+            animation: scroll-left 15s linear infinite;
+        }
+
+        /* ➡️ දකුණට යන Animation එක (Right Marquee) */
+        .move-right {
+            animation: scroll-right 15s linear infinite;
+        }
+
+        /* Animation එබූ විට නතර වීමට (Mouse Hover Effect) */
+        .marquee-row:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        /* CSS Keyframes - වමට චලනය වීම සඳහා */
+        @keyframes scroll-left {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* CSS Keyframes - දකුණට චලනය වීම සඳහා */
+        @keyframes scroll-right {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
