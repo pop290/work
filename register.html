@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order - Tech Parts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <img src="logo.jpg" alt="Logo">
+        Tech Parts
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="register.html">Order</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+    </div>
+    <div class="form-container">
+        <h2 class="form-title">computer part Order Form</h2>
+
+        <form action="#" method="POST">
+            
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+<div class="form-group">
+    <label for="category">Categories:</label>
+    <select id="category" name="category" onchange="updateParts()">
+        <option value="">-- Select Category --</option>
+        <option value="core">Core Components</option>
+        <option value="storage">Storage & Power</option>
+        <option value="cooling">Cooling Systems</option>
+    </select>
+</div>
+
+<div class="form-group">
+    <label for="parts">PC Parts:</label>
+    <select id="parts" name="parts">
+        <option value="">-- First Select Category --</option>
+    </select>
+</div>
+
+<script>
+    // Category වලට අදාළ PC Parts ලැයිස්තුව මෙතන තියෙනවා
+    const pcPartsData = {
+        core: ["Processor (CPU)", "Motherboard", "Memory (RAM)", "Graphic Card (GPU)"],
+        storage: ["NVMe M.2 SSD", "SATA SSD", "Hard Disk Drive (HDD)", "Power Supply (PSU)"],
+        cooling: ["CPU Air Cooler", "Liquid Cooler (AIO)", "Casing Fans", "Thermal Paste"]
+    };
+
+    function updateParts() {
+        const categorySelect = document.getElementById("category");
+        const partsSelect = document.getElementById("parts");
+        const selectedCategory = categorySelect.value;
+
+        // දැනට තියෙන පැරණි Options (Guitar, Violin වගේ ඒවා) ඔක්කොම අයින් කරනවා
+        partsSelect.innerHTML = "";
+
+        if (selectedCategory && pcPartsData[selectedCategory]) {
+            // තෝරපු Category එකට අදාළ PC Parts ටික Dropdown එකට එකතු කිරීම
+            pcPartsData[selectedCategory].forEach(function(part) {
+                let option = document.createElement("option");
+                option.value = part.toLowerCase().replace(/ /g, "-"); // values ලස්සනට සකස් කිරීම (उदा. cpu-cooler)
+                option.text = part;
+                partsSelect.appendChild(option);
+            });
+        } else {
+            // කිසිවක් තෝරා නැත්නම් පෙන්වන default option එක
+            let defaultOption = document.createElement("option");
+            defaultOption.text = "-- First Select Category --";
+            partsSelect.appendChild(defaultOption);
+        }
+    }
+</script>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" class="btn">Submit Order</button>
+                <button type="reset" class="btn">Clear Form</button>
+            </div>
+
+        </form>
+        <div class="texa">
+            <marquee direction="left">Powered by Sachintha Nirmal - Owner of Tech Parts</marquee>
+        </div>
+    </div>
+</body>
+</html>
+
